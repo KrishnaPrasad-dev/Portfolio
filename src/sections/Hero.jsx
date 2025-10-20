@@ -34,14 +34,14 @@ const Hero = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans"
 >
-  Hi, I am Krishna Prasad <span className="waving-hand">👋</span>
+  Chadvuko ra gadidaaaa.....<span className="waving-hand">👋</span>
 </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
   animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-         className="hero_tag text-gray_gradient ">Building Innovation Byte by Byte.</motion.p>
+         className="hero_tag text-gray_gradient ">neeke srihithaaaa</motion.p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
