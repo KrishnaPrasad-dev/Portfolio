@@ -2,6 +2,8 @@ import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
+
+import { motion } from "framer-motion";
 import { PerspectiveCamera } from '@react-three/drei';
 
 import Cube from '../components/Cube.jsx';
@@ -25,10 +27,21 @@ const Hero = () => {
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Krishna Prasad <span className="waving-hand">👋</span>
-        </p>
-        <p className="hero_tag text-gray_gradient ">Building Innovation Byte by</p>
+        
+      <motion.p
+  initial={{ y: 100, rotate: 45 }}
+  animate={{ y: 0, rotate: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans"
+>
+  Hi, I am Krishna Prasad <span className="waving-hand">👋</span>
+</motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+  animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+         className="hero_tag text-gray_gradient ">Building Innovation Byte by Byte.</motion.p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
