@@ -6,8 +6,8 @@ const App = () => {
     <main className="max-w-7xl mx-auto relative">
       <Navbar />
       <Hero />
-      {/* <About />
-      <Pakodi />    */}
+      <About />
+      
     </main>
   );
 };
