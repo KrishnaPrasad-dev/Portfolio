@@ -7,7 +7,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      
+      <Projects />    
     </main>
   );
 };
