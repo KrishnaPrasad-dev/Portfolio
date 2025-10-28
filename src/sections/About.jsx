@@ -63,7 +63,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
               <p className="grid-subtext">I&apos;m based in India, And open to remote work worldwide.</p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <Button name="Contact Me" isBeam   containerClass="w-full sm:w-3/4 inline-flex h-[30%]  mt-10 animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000_45%,#4D4B4B_55%,#000)] bg-[length:250%_100%] px-6 py-2 text-xl font-medium text-gray-300" />
             </div>
           </div>
         </div>

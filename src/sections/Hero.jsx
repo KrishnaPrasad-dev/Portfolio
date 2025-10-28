@@ -34,7 +34,7 @@ const Hero = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans"
 >
-  Hi, I am Krishna Prasad <span className="waving-hand">👋</span>
+  Hi, I am <span className='inline-flex animate-text-gradient bg-gradient-to-r from-[#b2a8fd] via-[#8678f9] to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-xl text-transparent sm:text-3xl text-center font-medium'> Krishna Prasad </span><span className="waving-hand">👋</span>
 </motion.p>
 
         <motion.p
@@ -70,7 +70,7 @@ const Hero = () => {
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
         <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96 inline-flex h-full animate-background-shine cursor-pointer items-center justify-center rounded-full border border-gray-800 bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] px-3 py-1 text-xl font-medium text-gray-300" />
         </a>
       </div>
     </section>
