@@ -5,8 +5,7 @@ import Button from '../components/Button.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
-
-  const handleCopy = () => {
+    const handleCopy = () => {
     navigator.clipboard.writeText('itzmekrishna.257@gmail.com');
     setHasCopied(true);
 
