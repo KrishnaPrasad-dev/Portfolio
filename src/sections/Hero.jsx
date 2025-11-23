@@ -10,21 +10,18 @@ import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
 import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-import CanvasLoader from '../components/Loading.jsx';
+import CanvasLoader from '../components/Loading.jsx'; // default export is DOM loader (safe outside Canvas)
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 
 const Hero = () => {
-  // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
-
-  // Loading state controlled by parent — show overlay loader until model calls onReady
   const [loading, setLoading] = useState(true);
 
   return (
@@ -50,7 +47,7 @@ const Hero = () => {
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        {/* Loader overlay controlled by state (pure presentational component) */}
+        {/* Loader overlay controlled by state (plain DOM loader — safe outside Canvas) */}
         {loading && (
           <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
             <CanvasLoader />
@@ -60,11 +57,9 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <ErrorBoundary>
             <Suspense fallback={null}>
-              {/* To hide controller */}
               <Leva hidden />
               <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
-              {/* Pass onReady so HackerRoom can tell us when it's loaded (safe: HackerRoom calls onReady inside useEffect) */}
               <HeroCamera isMobile={isMobile}>
                 <HackerRoom
                   scale={sizes.deskScale}
@@ -75,7 +70,6 @@ const Hero = () => {
               </HeroCamera>
 
               <group>
-                
                 <ReactLogo position={sizes.reactLogoPosition} />
                 <Rings position={sizes.ringPosition} />
                 <Cube position={sizes.cubePosition} />
