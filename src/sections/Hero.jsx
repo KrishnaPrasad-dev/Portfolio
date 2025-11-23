@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-32  c-space gap-3">
         <motion.p
           initial={{ y: 100, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
