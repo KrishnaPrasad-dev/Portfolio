@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Globe from 'react-globe.gl';
 
+
 import Button from '../components/Button.jsx';
 
 const About = () => {
@@ -90,10 +91,37 @@ const About = () => {
 
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">itzmekrishna.257@gmail.com</p>
-              </div>
+              <div className="flex flex-row justify-center" onClick={handleCopy}>
+                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" className='h-8' />
+                <p className="lg:text-2xl mb-8 md:text-xl font-medium text-gray_gradient text-white">itzmekrishna.257@gmail.com</p>
+                 </div>
+                <div className="text-indigo-300 flex justify-center  flex-row gap-4 font-medium text-lg md:text-xl">
+
+  {/* GitHub */}
+  <a
+    href="https://github.com/KrishnaPrasad-dev"
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-2 bg-gray-400 h-11 px-3 rounded-md border shadow-sm"
+  >
+    <img src="assets/github.png" alt="github" className="h-7 w-7" />
+    <p className="text-black">Github</p>
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/krishnaprasad-webdev"
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-2 bg-gray-400 h-11 px-3 rounded-md border shadow-sm"
+  >
+    <img src="assets/linkedin.png" alt="linkedin" className="h-7 w-7" />
+    <p className="text-black">Linkedin</p>
+  </a>
+
+</div>
+
+              
             </div>
           </div>
         </div>
