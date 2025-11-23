@@ -70,13 +70,26 @@ const About = () => {
 
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+            <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[244px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
                 Coding isn’t just a skill for me—it’s something I genuinely enjoy. I love the process of solving problems, bringing ideas to life, and continuously learning through code.
               </p>
+              <div className='flex justify-center items-center relative top-12'>
+
+                <a href="https://drive.google.com/file/d/1GaS5vnuTb5pxKcc2e4PXCaLQKFr4bbZG/view?usp=drive_link" target='blank' className="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-semibold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none">
+
+    <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+    <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+    <span className="relative z-20 flex items-center text-xl">
+        <svg className="relative w-11 h-9 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        Check Resume
+    </span>
+</a>
+              </div>
+              
             </div>
           </div>
         </div>
